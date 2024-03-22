@@ -1,0 +1,3 @@
+C:/Users/ghdah/CLionProjects/BasedProgramming1/cmake-build-debug/CMakeFiles/BasedProgramming.dir
+C:/Users/ghdah/CLionProjects/BasedProgramming1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ghdah/CLionProjects/BasedProgramming1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,5 @@
+# ninja log v5
+90	166	7327992015902156	BasedProgramming.exe	594a7f9850a3deee
+1	146	7327994820649464	build.ninja	4cfe2b9f3877b8b2
+8	129	7327922533484584	CMakeFiles/BasedProgramming.dir/class2.c.obj	a0a5ecf7bc09c187
+2	89	7327992015167865	CMakeFiles/BasedProgramming.dir/class1.c.obj	61acebad2a6e64ba
