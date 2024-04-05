@@ -3,7 +3,6 @@ project(BasedProgramming)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(BasedProgramming class1.c
-        class2.c
+add_executable(BasedProgramming BasicProgramming1.c
         struct.h
 )
