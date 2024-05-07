@@ -1,11 +1,12 @@
 # ninja log v5
-503	1033	7339954677709718	BasedProgramming.exe	594a7f9850a3deee
-1	146	7339965464196009	build.ninja	4cfe2b9f3877b8b2
+158	245	7364239981863408	BasedProgramming.exe	bde8d056eee6d277
+1	146	7340002953474722	build.ninja	4cfe2b9f3877b8b2
 14	502	7339954672429700	CMakeFiles/BasedProgramming.dir/class2.c.obj	e77397fd44748b04
-4	501	7339954672429700	CMakeFiles/BasedProgramming.dir/class1.c.obj	fd51ae4f230a5a35
-2	67	7339969133902866	CMakeFiles/BasedProgramming.dir/class1.c.obj	fd51ae4f230a5a35
-68	158	7339969134765093	BasedProgramming.exe	e953ae54e1837009
-2	94	7339969461622868	CMakeFiles/BasedProgramming.dir/class1.c.obj	fd51ae4f230a5a35
-94	225	7339969462857590	BasedProgramming.exe	e953ae54e1837009
 1	63	7339969939976626	CMakeFiles/BasedProgramming.dir/class1.c.obj	fd51ae4f230a5a35
-64	135	7339969940661012	BasedProgramming.exe	e953ae54e1837009
+1	158	7364239980718957	CMakeFiles/BasedProgramming.dir/BasicProgramming1.c.obj	b3fdf27b28bc4d93
+4	118	7364240028887813	CMakeFiles/BasedProgramming.dir/BasicProgramming1.c.obj	b3fdf27b28bc4d93
+119	198	7364240029645555	BasedProgramming.exe	bde8d056eee6d277
+2	105	7364261073845310	CMakeFiles/BasedProgramming.dir/BasicProgramming1.c.obj	b3fdf27b28bc4d93
+106	200	7364261074748343	BasedProgramming.exe	bde8d056eee6d277
+3	122	7364267727667723	CMakeFiles/BasedProgramming.dir/BasicProgramming1.c.obj	b3fdf27b28bc4d93
+122	275	7364267729139235	BasedProgramming.exe	bde8d056eee6d277
