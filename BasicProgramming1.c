@@ -917,6 +917,187 @@ void n_end(char yn) {
     exit(0);
 }
 
+int class9_1(void) {
+//  변수
+    int cnt;
+
+    printf("1부터 10까지 누적 합계 출력\n");
+
+    for(cnt = 1; cnt <= 10; cnt++) {
+        int sum = 0;
+        sum += cnt;
+        printf("1부터 %d까지 누적 합계 : %d\n", cnt, sum);
+        // 출력되는 결과로 누적되는 합계가 정상적으로 산출되지 않음
+    }
+    return 0;
+}
+
+void Start();
+
+int class9_2(void) {
+    printf("Start() 함수 3회 호출 결과\n");
+    Start();
+    Start();
+    Start();
+
+    return 0;
+}
+
+void Start() {
+    static int s_cnt = 0;
+    int a_cnt = 0;
+
+    printf("정적 변수 = %d\t 동적 변수 = %d\n", s_cnt, a_cnt);
+    s_cnt++;
+    a_cnt++;
+}
+
+
+int class9_3(void) {
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+// challenge9 도전문제
+
+int A;
+static int B;
+
+void In_Fun(void);
+extern void Out_Fun(void);
+
+int challenge9_1(void) {
+        Out_Fun();
+
+        In_Fun();
+
+
+    return 0;
+}
+
+void In_Fun(void) {
+    B = 20;
+    printf("\n[내부 In_Fun() 함수 영역]\n");
+}
+
+
+extern int A;
+
+void Out_Fun(void) {
+    A = 10;
+    printf("\n[외부 Out_Fun() 함수 영역]\n");
+}
+
+
+#define DT 3
+
+int class10_1(void) {
+//  배열
+    int score[3];
+    int cnt, sum = 0;
+    float avg;
+
+    for(cnt = 0; cnt < DT; cnt++) {
+        printf("과목 %d 점수 : ___\b\b\b", cnt + 1);
+        scanf_s("%d", &score[cnt]);
+        printf("\n");
+    }
+    for(cnt = 0; cnt < DT; cnt++) {
+        sum += score[cnt];
+    }
+    avg = (float) sum / DT;
+
+    printf("총점: %d\n", sum);
+    printf("평균 %.2f\n", avg);
+
+
+    return 0;
+}
+
+
+#define CP 10
+
+int homework9(void) {
+    char yn;
+    int choice, cnt;
+    int car[CP] = { 0 };
+
+    do {
+        printf("자동차 모델을 선택하시겠습니까? (Y / N) : ");
+        scanf_s(" %c", &yn, sizeof(yn));
+
+        if(yn == 'N' || yn == 'n') break;
+        else if(yn == 'Y' || yn == 'y') {
+            printf("자동차 모델 번호 : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\n");
+            printf("자동차 예약 현황 : ");
+
+            for(cnt = 0; cnt < CP; cnt++) {
+                printf("%2d", car[cnt]);
+            }
+            printf("\n");
+
+            re_input:
+
+            printf("\n자동차 모델 선택(1~10) : ");
+            scanf_s("%d", &choice);
+
+            if(choice < 1 || choice > 10) {
+                printf("잘못 입력했습니다.!\n");
+                printf("모델번호를 다시 입력하세요.\n");
+                goto re_input;
+            } else {
+                if(car[choice-1] == 0) {
+                    car[choice - 1] = 1;
+                    printf("예약 완료!\n");
+                }
+                else {
+                    printf("[No.%d]모델은 이미 예약되었습니다.\n", choice);
+                    printf("모델 번호를 다시 선택하세요.\n");
+                    goto re_input;
+                }
+            }
+        } else {
+            printf("알파벳 입력 오류!\n");
+            printf("알파벳은 대소문자 구별없이 Y 또는 N만 허용됩니다.\n");
+            printf("알파벳을 다시 입력하시오.\n\n");
+        }
+
+    } while(1);
+
+    printf("자동차 모델 [No.%d] 예약 완료 후 프로그램 종료\n", choice);
+
+    return 0;
+}
+
+int class10_2(void) {
+    char str01[20] = "C language is ";
+    char str02[] = "Cool! and funny!";
+    strncat(str01, str02, 5);
+    puts(str01);
+
+}
+
+int class10_3(void) {
+    char str01[20] = "C is Cool!";
+    char str02[11];
+
+    strncpy(str02, str01, sizeof(str02)-1);
+    str02[sizeof(str02)-1] = '\0';
+    puts(str02);
+
+    return 0;
+}
+
+
+
+
 
 
 
@@ -941,9 +1122,15 @@ int main(void) {
 //    challenge7_2();
 //    class8_1();
 //    class8_8();
-    challenge8();
-
-
+//    challenge8();
+//    class9_1();
+//    class9_2();
+//    class9_3();
+//    challenge9_1();
+//    class10_1();
+//    homework9();
+//    class10_2();
+    class10_3();
 
     return 0;
 }
