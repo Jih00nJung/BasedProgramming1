@@ -1095,8 +1095,98 @@ int class10_3(void) {
     return 0;
 }
 
+#define DT 5
+int sv(int score[], int size);
+
+int class11_1(void) {
+
+    int score[DT] = {88, 96, 75, 81, 99};
+    int sum = 0;
+    float avg;
+
+    printf("상수 > define DT 5\n");
+    printf("배열 > score[DT] = {88, 96, 75, 81, 99};\n");
+
+    sum = sv(score, DT);
+    avg = sum / 5.0;
+
+    printf("반환 > 5개 과목의 총점 : %d\n", sum);
+    printf("산출 > 5개 과목의 평균 : %.2f\n", avg);
+
+    return 0;
+}
+
+int sv(int score[], int size) {
+    int cnt, total = 0;
+
+    printf("\n사용자 정의 함수로 총점 계산\n");
+
+    for(cnt = 0; cnt < size; cnt++) total += score[cnt];
+
+    return total;
+}
 
 
+
+// 틱택토 코드 만들기
+
+#define R 5
+#define C 5
+
+int tictactoe(void) {
+    char tic[R][C];
+    int total = R * C;
+    int used[total];
+    int index, cnt = 0;
+    int r, c;
+
+    for (int i = 0; i < total; i++) {
+        used[i] = i;
+    }
+
+    for (int i = total-1; i > 0; i--) {
+        int j = rand() % (i + 1);
+        int temp = used[i];
+        used[i] = used[j];
+        used[j] = temp;
+    }
+
+    for (int i = 0; i < total; i++) {
+        int pos = used[i];
+        int row = pos / C;
+        int col = pos % C;
+        if (i < 12) {
+            tic[row][col] = 'O';
+        } else {
+            tic[row][col] = 'X';
+        }
+    }
+
+    for (int j = 0; j < R; j++) {
+        printf("|---|---|---|---|---|\n");
+        for (int k = 0; k < C; k++) {
+            printf("| %c ", tic[j][k]);
+        }
+        printf("|\n");
+    }
+    printf("|---|---|---|---|---|\n\n");
+    printf("초기 게임 설정, O 12개와 X 13개 배치\n");
+
+    printf("게임을 시작합니다. O 플레이어부터 행과 열을 입력해 주세요.\n");
+
+    scanf_s("%d %d", &r, &c);
+    for(int turn = 0; turn < total; turn++) {
+        if(turn % 2 != 0) {
+            tic[r][c] == 'X' ? 'O' : 'X';
+        } else {
+            tic[r][c] == 'O' ? 'X' : 'O';
+        }
+
+        if(tic[r][0:4] )
+    }
+
+    return 0;
+}
 
 
 
@@ -1130,7 +1220,13 @@ int main(void) {
 //    class10_1();
 //    homework9();
 //    class10_2();
-    class10_3();
+//    class10_3();
+//    class11_2();
+//    challenge11_3();
+//    tictactoe();
+
+
 
     return 0;
+
 }

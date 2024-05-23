@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(BasedProgramming BasicProgramming1.c
         struct.h
+        tictactoe.c
 )
