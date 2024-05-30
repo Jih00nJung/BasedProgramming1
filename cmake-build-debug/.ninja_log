@@ -1,7 +1,7 @@
 # ninja log v5
+151	274	7387736641754773	BasedProgramming.exe	bde8d056eee6d277
+1	464	7387898414574878	build.ninja	2992a12f589c68a5
 14	502	7339954672429700	CMakeFiles/BasedProgramming.dir/class2.c.obj	e77397fd44748b04
-1	146	7381783488464946	build.ninja	4cfe2b9f3877b8b2
-132	213	7381782066311669	BasedProgramming.exe	bde8d056eee6d277
 1	63	7339969939976626	CMakeFiles/BasedProgramming.dir/class1.c.obj	fd51ae4f230a5a35
-2	131	7381782065543401	CMakeFiles/BasedProgramming.dir/BasicProgramming1.c.obj	b3fdf27b28bc4d93
+2	151	7387736640584514	CMakeFiles/BasedProgramming.dir/BasicProgramming1.c.obj	b3fdf27b28bc4d93
 10	90	7381785307571538	CMakeFiles/BasedProgramming.dir/tictactoe.c.obj	b1787bb818a8fd48
