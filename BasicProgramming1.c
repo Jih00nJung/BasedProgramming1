@@ -1129,66 +1129,118 @@ int sv(int score[], int size) {
 
 
 // 틱택토 코드 만들기
+//
+//#define R 5
+//#define C 5
+//
+//int tictactoe(void) {
+//    char tic[R][C];
+//    int total = R * C;
+//    int used[total];
+//    int index, cnt = 0;
+//    int r, c;
+//
+//    for (int i = 0; i < total; i++) {
+//        used[i] = i;
+//    }
+//
+//    for (int i = total-1; i > 0; i--) {
+//        int j = rand() % (i + 1);
+//        int temp = used[i];
+//        used[i] = used[j];
+//        used[j] = temp;
+//    }
+//
+//    for (int i = 0; i < total; i++) {
+//        int pos = used[i];
+//        int row = pos / C;
+//        int col = pos % C;
+//        if (i < 12) {
+//            tic[row][col] = 'O';
+//        } else {
+//            tic[row][col] = 'X';
+//        }
+//    }
+//
+//    for (int j = 0; j < R; j++) {
+//        printf("|---|---|---|---|---|\n");
+//        for (int k = 0; k < C; k++) {
+//            printf("| %c ", tic[j][k]);
+//        }
+//        printf("|\n");
+//    }
+//    printf("|---|---|---|---|---|\n\n");
+//    printf("초기 게임 설정, O 12개와 X 13개 배치\n");
+//
+//    printf("게임을 시작합니다. O 플레이어부터 행과 열을 입력해 주세요.\n");
+//
+//    scanf_s("%d %d", &r, &c);
+//    for(int turn = 0; turn < total; turn++) {
+//        if(turn % 2 != 0) {
+//            tic[r][c] == 'X' ? 'O' : 'X';
+//        } else {
+//            tic[r][c] == 'O' ? 'X' : 'O';
+//        }
+//
+//        if(tic[r][0:4] )
+//    }
+//
+//    return 0;
+//}
 
-#define R 5
-#define C 5
 
-int tictactoe(void) {
-    char tic[R][C];
-    int total = R * C;
-    int used[total];
-    int index, cnt = 0;
-    int r, c;
+int challenge12_1(void) {
+    char *ps;
+    char st[11] = { 0 };
 
-    for (int i = 0; i < total; i++) {
-        used[i] = i;
+    ps = st;
+
+    printf("문자열 입력 (10바이트 이내) : __________ \b\b\b\b\b\b\b\b\b\b");
+    scanf_s("%s", st, sizeof(st));
+
+    for(int cnt = 0; cnt < 10; cnt++) {
+        printf(" *(ps + %d) : %c\n", cnt, *(ps + cnt));
     }
+        return 0;
 
-    for (int i = total-1; i > 0; i--) {
-        int j = rand() % (i + 1);
-        int temp = used[i];
-        used[i] = used[j];
-        used[j] = temp;
-    }
 
-    for (int i = 0; i < total; i++) {
-        int pos = used[i];
-        int row = pos / C;
-        int col = pos % C;
-        if (i < 12) {
-            tic[row][col] = 'O';
-        } else {
-            tic[row][col] = 'X';
-        }
-    }
-
-    for (int j = 0; j < R; j++) {
-        printf("|---|---|---|---|---|\n");
-        for (int k = 0; k < C; k++) {
-            printf("| %c ", tic[j][k]);
-        }
-        printf("|\n");
-    }
-    printf("|---|---|---|---|---|\n\n");
-    printf("초기 게임 설정, O 12개와 X 13개 배치\n");
-
-    printf("게임을 시작합니다. O 플레이어부터 행과 열을 입력해 주세요.\n");
-
-    scanf_s("%d %d", &r, &c);
-    for(int turn = 0; turn < total; turn++) {
-        if(turn % 2 != 0) {
-            tic[r][c] == 'X' ? 'O' : 'X';
-        } else {
-            tic[r][c] == 'O' ? 'X' : 'O';
-        }
-
-        if(tic[r][0:4] )
-    }
-
-    return 0;
 }
 
+int challenge12_2(void) {
 
+    int cnt, size;
+    char *dept[] = {
+            "행정학과",
+            "법학과",
+            "빅데이터사이언스학과",
+    };
+    printf("전공 학과 선택\n");
+    size = sizeof(dept) / sizeof(dept[0]);
+
+    for(cnt = 0; cnt < size; cnt++) {
+        printf("%d. %s\n", cnt + 1, dept[cnt]);
+    }
+        return 0;
+
+}
+
+int challenge12_3(void) {
+
+    int a[5] = {88, 97, 85, 93, 99};
+    int (*ap) [5];
+    int cnt;
+
+    ap = &a;
+    printf("a[5] = {88, 97, 85, 93, 99}\n");
+
+    for(cnt = 0; cnt < 5; cnt++) {
+        printf("%d번째 요소 : %d\n", cnt + 1, (*ap)[cnt]);
+    }
+        return 0;
+
+
+
+}
 
 
 
@@ -1224,7 +1276,7 @@ int main(void) {
 //    class11_2();
 //    challenge11_3();
 //    tictactoe();
-
+    challenge12_3();
 
 
     return 0;

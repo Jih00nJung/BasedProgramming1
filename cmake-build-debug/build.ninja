@@ -55,12 +55,6 @@ build CMakeFiles/BasedProgramming.dir/BasicProgramming1.c.obj: C_COMPILER__Based
   OBJECT_DIR = CMakeFiles\BasedProgramming.dir
   OBJECT_FILE_DIR = CMakeFiles\BasedProgramming.dir
 
-build CMakeFiles/BasedProgramming.dir/tictactoe.c.obj: C_COMPILER__BasedProgramming_unscanned_Debug C$:/Users/ghdah/CLionProjects/BasedProgramming1/tictactoe.c || cmake_object_order_depends_target_BasedProgramming
-  DEP_FILE = CMakeFiles\BasedProgramming.dir\tictactoe.c.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\BasedProgramming.dir
-  OBJECT_FILE_DIR = CMakeFiles\BasedProgramming.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target BasedProgramming
@@ -69,7 +63,7 @@ build CMakeFiles/BasedProgramming.dir/tictactoe.c.obj: C_COMPILER__BasedProgramm
 #############################################
 # Link the executable BasedProgramming.exe
 
-build BasedProgramming.exe: C_EXECUTABLE_LINKER__BasedProgramming_Debug CMakeFiles/BasedProgramming.dir/BasicProgramming1.c.obj CMakeFiles/BasedProgramming.dir/tictactoe.c.obj
+build BasedProgramming.exe: C_EXECUTABLE_LINKER__BasedProgramming_Debug CMakeFiles/BasedProgramming.dir/BasicProgramming1.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\BasedProgramming.dir
